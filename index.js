@@ -5,14 +5,14 @@ import cors from "cors";
 
 const configuration = new Configuration({
     organization: "org-u7jOMxijJ5GKfmoOVe9FT4I2",
-    apiKey: "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"
+    apiKey: ""
 });
 
 const openai = new OpenAIApi(configuration);
 
 
 const app = express();
-const port = 3001;
+const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -36,5 +36,5 @@ app.post("/", async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(`Server running on port: ${port}`);
 });
